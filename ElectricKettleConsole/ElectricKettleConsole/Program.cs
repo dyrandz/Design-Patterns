@@ -9,9 +9,9 @@ namespace ElectricKettleConsole
         {
             var kettle = SingletonKettleContainer.Instance;
             
-            kettle.Invoke(KettleStatusEnum.KettleStatus.Empty);
-            kettle.Invoke(KettleStatusEnum.KettleStatus.InProgress);
-            kettle.Invoke(KettleStatusEnum.KettleStatus.Boiled);
+            kettle.Invoke(KettleStatus.Empty);
+            kettle.Invoke(KettleStatus.InProgress);
+            kettle.Invoke(KettleStatus.Boiled);
         }
     }
 }

@@ -7,17 +7,17 @@ namespace ElectricKettleConsole
 {
     public static class KettleExtentions
     {
-        public static void Invoke(this SingletonKettleContainer kettle, KettleStatusEnum.KettleStatus status)
+        public static void Invoke(this SingletonKettleContainer kettle, KettleStatus status)
         {
             switch (status)
             {
-                case KettleStatusEnum.KettleStatus.Empty:
+                case KettleStatus.Empty:
                     kettle.Fill();
                     break;
-                case KettleStatusEnum.KettleStatus.InProgress:
+                case KettleStatus.InProgress:
                     kettle.Boil();
                     break;
-                case KettleStatusEnum.KettleStatus.Boiled:
+                case KettleStatus.Boiled:
                     kettle.Drain();
                     break;
                 default:
